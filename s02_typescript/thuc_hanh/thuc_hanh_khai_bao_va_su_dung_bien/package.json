@@ -1,0 +1,7 @@
+{
+  "name": "thuc_hanh_khai_bao_va_su_dung_bien",
+  "version": "1.0.0",
+  "dependencies": {
+    "typescript": "^4.1.5"
+  }
+}
