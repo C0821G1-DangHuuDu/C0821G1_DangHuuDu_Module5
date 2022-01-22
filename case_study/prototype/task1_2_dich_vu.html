@@ -8,13 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <style>
         .header{
-            height: 50px;
+            height: 150px;
             align-items: center;
             border: black solid 1px;
-            background-color: aqua;
         }
         .nav{
             border: black solid 1px;
+            height: 80px;
+            background-color: #046056;
+            padding-top: 10px;
         }
         .body{
             height: 500px;
@@ -25,62 +27,144 @@
         .right{
             border: black solid 1px;
         }
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+            top: 200px;
+            left: 100px;
+        }
+        .sticky{
+            position: sticky;
+            top: 0px;
+        }
     </style>
 </head>
-<body class="bg-image"
-      style="background-size: cover;
- background-image: url('https://24s.vn/hinh-nen-dep-cho-may-tinh-bang/imager_4_5281_700.jpg'); ">
-<div class="row header">
-    <div class="col-3">
-        <img src="">
-    </div>
-    <div class="col-3">
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-3" style="text-align: center">
+                <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo.png">
+            </div>
+            <div class="col-3">
+                <img src="https://smartdata.tonytemplates.com/bestel/wp-content/uploads/2018/05/widget-tripadvisor-logo.png">
+            </div>
+            <div class="col-3" style="text-align: right">
+                <div class="d-flex">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>
+                    </div>
+                    <div style="text-align: left">
+                        <p>103 – 105 Đường Võ Nguyên Giáp, Phường Khuê Mỹ, Quận Ngũ hành Sơn, Tp. Đà Nẵng, Việt Nam</p>
+                        <p>7.0 km từ Sân bay Quốc tế Đà Nẵng</p>
+                    </div>
+                </div>
 
-    </div>
-    <div class="col-6" style="text-align: right">
-        <span>Đặng Hữu Dự</span>
-    </div>
-</div>
-<div class="row nav">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/employee/list">Employee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/customer/list">Customer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Contact</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+            </div>
+            <div class="col-3" style="text-align: right">
+                <div class="d-flex">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                    </div>
+                    <div style="text-align: left">
+                        <p>84-236-3847 333/888</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                        </svg>
+                    </div>
+                    <div style="text-align: left">
+                        <p>reservation@furamavietnam.com</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-</div>
-<div class="row body">
-    <div class="col-3 left">
-        <p>Item one</p>
-        <p>Item two</p>
-        <p>Item three</p>
     </div>
-    <div class="col-9 right">
-        body
+
+</div>
+<div class="sticky">
+    <div class="nav">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container" >
+                        <a class="navbar-brand" href="" style="color: white">GIỚI THIỆU</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="" style="color: white">LOẠI PHÒNG</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/customer/list" style="color: white">ẨM THỰC</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">HỘI NGHỊ VÀ SỰ KIỆN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">SPA</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">GIẢI TRÍ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">ĐIỂM ĐẾN</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">ƯU ĐÃI</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" style="color: white">EVOUCHER</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
     </div>
 </div>
+
+<div class="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="relative" >
+                <img src="https://furamavietnam.com/wp-content/uploads/2018/07/Vietnam_Danang_Furama_Resort_Exterior-Furama-girl-with-pink-hat.jpg" style="width: 100%; padding-left: 0px; padding-right: 0px">
+                <div class="absolute">
+                    <h2 style="color: white">
+                        KHU NGHỈ DƯỠNG ẨM THỰC
+                    </h2>
+                    <h2 style="color: white">
+                        TOẠ LẠC TẠI BÃI BIỂN ĐÀ NẴNG
+                    </h2>
+                    <h2 style="color: white">
+                        MỘT TRONG 6 BÃI BIỂN ĐẸP NHẤT THẾ GIỚI
+                    </h2>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 <div class="row footer">
     Footer
 </div>
