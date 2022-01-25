@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  constructor() { }
+  public num1: number;
+  public num2: number;
+  public result: number;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  add(): void {
+    this.result = Number(this.num1) + Number(this.num2);
+  }
+
+  sub(): void {
+    this.result = Number(this.num1) - Number(this.num2);
+  }
+
+  mul(): void {
+    this.result = Number(this.num1) * Number(this.num2);
+  }
+
+  div(): void {
+    this.result = Number(this.num1) / Number(this.num2);
+
+  }
 }
