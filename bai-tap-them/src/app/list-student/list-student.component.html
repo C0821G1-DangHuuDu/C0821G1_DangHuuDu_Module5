@@ -1,0 +1,25 @@
+<table class="table table-striped">
+  <thead>
+   <tr>
+    <td>Name:</td>
+    <td>Gender:</td>
+    <td>Point:</td>
+   </tr>
+  </thead>
+    <tr *ngFor="let student of students;index as i" (click)="sendSdutent(student)">
+        <td>{{student.name}}</td>
+<!--      Cách 1-->
+<!--        <td *ngIf="student.gender === 1">Nam</td>-->
+<!--        <td *ngIf="student.gender === 0">Nu</td>-->
+<!--      Cách 2-->
+        <td>{{student.gender===1?'Nam':'Nu'}}</td>
+        <td>{{student.point}}</td>
+    </tr>
+</table>
+
+<h1>Detail</h1>
+  <app-detail-student [detailStudent]="studentSend"></app-detail-student>
+<h1>Create New Student</h1>
+<app-creat-student (createStudents)="createNewStudent($event)"></app-creat-student>
+<h1>Edit Student</h1>
+<app-edit-student (editNStudent)="editStudent($event)"></app-edit-student>
