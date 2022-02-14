@@ -1,0 +1,65 @@
+<h1>Register Form</h1>
+
+<form (ngSubmit)="getInfoRegister()" [formGroup]="registerForm">
+  <div>
+    Email:
+    <input type="text" formControlName="email">
+  </div>
+  <p style="color: red" *ngIf="registerForm.controls.email.hasError('email')">
+    Email khong dung dinh dang!
+  </p>
+  <p style="color: red" *ngIf="registerForm.controls.email.hasError('required') && registerForm.controls.email.dirty">
+    Email không được để trống
+  </p>
+  <div>
+    Password:
+    <input type="text" formControlName="password">
+  </div>
+  <p style="color: red" *ngIf="registerForm.controls.password.hasError('required') && registerForm.controls.password.dirty">
+    Password không được để trống
+  </p>
+  <p style="color: red" *ngIf="registerForm.controls.password.hasError('minlength')">
+    Password it nhat 6 ky tu
+  </p>
+  <div >
+    Confirm Password:
+    <input type="text" formControlName="passwordConfirm">
+  </div>
+  <p style="color: red" *ngIf="registerForm.controls.passwordConfirm.hasError('minlength')">
+    Confirm Password it nhat 6 ky tu
+  </p>
+  <p style="color: red" *ngIf="registerForm.controls.passwordConfirm.hasError('required') && registerForm.controls.passwordConfirm.dirty">
+    Confirm Password không được để trống
+  </p>
+  <p style="color: red" *ngIf="registerForm.controls.passwordConfirm.hasError('checkPass')" >
+    Confirm Password chua dung
+  </p>
+  <div>
+    Country:
+    <select formControlName="country">
+      <option value="vn">Viet Nam</option>
+      <option value="us">My</option>
+      <option value="en">Anh</option>
+      <option value="jp">Nhat</option>
+      <option value="other">Khac</option>
+    </select>
+  </div>
+  <div>
+    Age:
+    <input type="text" formControlName="age">
+  </div>
+  <p style="color: red" *ngIf="registerForm.controls.age.hasError('checkAge') && registerForm.controls.age.dirty">
+    Tuoi phai lon hon 18
+  </p>
+
+  <div>
+    Phone:
+    <input type="text" formControlName="phone">
+  </div>
+  <p style="color: red" *ngIf="registerForm.controls.phone.hasError('pattern')">
+    Dien thoai không dung dinh dang
+  </p>
+  <div>
+    <button [disabled]="registerForm.invalid">Register</button>
+  </div>
+</form>

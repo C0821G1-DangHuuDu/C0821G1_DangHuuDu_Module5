@@ -20,7 +20,7 @@ export class CreatStudentComponent implements OnInit {
   createStudent() {
   this.createStudents.emit({
     name: this.name,
-    gender: this.gender,
+    gender: Number (this.gender),
     point: this.point
   });
   }

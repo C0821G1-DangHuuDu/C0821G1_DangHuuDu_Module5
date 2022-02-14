@@ -19,7 +19,7 @@ export class EditStudentComponent implements OnInit {
   editStudent() {
     this.editNStudent.emit({
       name : this.name,
-      gender: this.gender,
+      gender: Number (this.gender),
       point: this.point
     });
   }
