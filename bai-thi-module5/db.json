@@ -1,0 +1,32 @@
+{
+
+  "studentList": [
+    {
+      "id": 1,
+      "tenSv": "Nguyen Van An",
+      "tenNhom": "Nhom 1",
+      "deTai": "Java",
+      "gvHuongdan": "Dang Chi Trung",
+      "email": "an@gmail.com",
+      "dienThoai": "0905111222"
+    },
+    {
+      "id": 2,
+      "tenSv": "Nguyen Thi Tinh",
+      "tenNhom": "Nhom 2",
+      "deTai": "Angular",
+      "gvHuongdan": "Nguyen Vu Thanh Tien",
+      "email": "tinh@gmail.com",
+      "dienThoai": "0905111333"
+    },
+    {
+      "id": 3,
+      "tenSv": "Nguyen Binh An",
+      "tenNhom": "Nhom 3",
+      "deTai": "Node JS",
+      "gvHuongdan": "Tran Minh Chien",
+      "email": "ban@gmail.com",
+      "dienThoai": "0905222333"
+    }
+  ]
+}

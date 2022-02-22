@@ -1,0 +1,70 @@
+<h1 style="text-align: center">Customer List</h1>
+<a style="text-align: center">
+  Thêm mới
+</a>
+<div class="container mt-5">
+  <table class="table table-bordered">
+    <thead class="text-center">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Date of birth</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col" colspan="2">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customerList;index as i">
+      <th scope="row" class="text-center">{{i+1}}</th>
+      <td>{{customer.firstName}}</td>
+      <td>{{customer.lastName}}</td>
+      <td>{{customer.dateOfBirth}}</td>
+      <td>
+              <span *ngIf="customer.gender == 1;else cus">
+                Male
+              </span>
+        <ng-template #cus>
+          Female
+        </ng-template>
+      </td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td class="text-center">
+        <a role="button" class="btn btn-large btn-light btn-delete bg-warning" data-bs-toggle="modal">
+          Edit
+        </a>
+      </td>
+      <td class="text-center">
+        <a role="button" class="btn btn-large btn-light btn-delete bg-danger" data-bs-toggle="modal"
+           data-bs-target="#deleteModal">
+          Delete
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--DELETE MODAL-->
+<div class="modal" tabindex="-1" id="deleteModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Are you sure to delete</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="link-delete" type="button" class="btn btn-primary" href="">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

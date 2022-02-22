@@ -11,3 +11,25 @@
     </li>
   </ul>
 </div>
+<h2>List Todo</h2>
+<table border="1">
+  <tr>
+    <th>No</th>
+    <th>Id</th>
+    <th>Content</th>
+    <th>Complete</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <tr *ngFor="let todo of todos;index as i" (click)="changeStatus(todo)">
+    <td>{{i + 1}}</td>
+    <td>{{todo.id}}</td>
+    <td>{{todo.content}}</td>
+    <td>{{todo.complete}}</td>
+    <td>
+      <a routerLink="/detail/{{todo.id}}">Detail</a>
+    </td>
+    <td>
+      <a routerLink="/update/{{todo.id}}">Update</a>
+    </td>
+  </tr>
+</table>

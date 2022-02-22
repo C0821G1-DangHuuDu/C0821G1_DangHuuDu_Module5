@@ -1,0 +1,19 @@
+{
+  "todoList": [
+    {
+      "id": 652,
+      "content": "Tran Cong Khanh",
+      "complete": true
+    },
+    {
+      "id": 653,
+      "content": "Le Tran Thao Vy",
+      "complete": false
+    },
+    {
+      "id": 654,
+      "content": "Nguyen Hoang Gia Bao",
+      "complete": true
+    }
+  ]
+}

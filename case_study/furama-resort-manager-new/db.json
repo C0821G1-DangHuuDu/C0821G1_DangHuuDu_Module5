@@ -1,0 +1,102 @@
+{
+  "customerList": [
+    {
+      "id": 1,
+      "firstName": "Huu",
+      "lastName": "Du",
+      "dateOfBirth": "2022-02-22",
+      "gender": 1,
+      "phone": "0905111222",
+      "email": "du@gmail.com",
+      "address": "QN",
+      "typeOfCustomer": {
+        "id": 1,
+        "typeOfCustomer": "Diamond"
+      }
+    },
+    {
+      "id": "2",
+      "firstName": "sfg",
+      "lastName": "sdfg",
+      "dateOfBirth": "",
+      "gender": "1",
+      "phone": "0905333444",
+      "email": "h@g",
+      "address": "DN",
+      "typeOfCustomer": {
+        "id": 2,
+        "typeOfCustomer": "Silver"
+      }
+    },
+    {
+      "id": "3",
+      "firstName": "cvvczxv",
+      "lastName": "cvzcv",
+      "dateOfBirth": "2022-02-15",
+      "gender": "0",
+      "phone": "0905666777",
+      "email": "d@hj",
+      "address": "QN",
+      "typeOfCustomer": {
+        "id": 3,
+        "typeOfCustomer": "Gold"
+      }
+    },
+    {
+      "id": "4",
+      "firstName": "ấddaf",
+      "lastName": "ádfasdf",
+      "dateOfBirth": "2022-02-09",
+      "gender": "1",
+      "phone": "09051234231",
+      "email": "a@f",
+      "address": "DN",
+      "typeOfCustomer": {
+        "id": 1,
+        "typeOfCustomer": "Diamond"
+      }
+    },
+    {
+      "id": "5",
+      "firstName": "ádfa",
+      "lastName": "adsfasdf",
+      "dateOfBirth": "2022-02-08",
+      "gender": "1",
+      "phone": "635635",
+      "email": "a@dfbgdfg",
+      "address": "DM",
+      "typeOfCustomer": {
+        "id": 1,
+        "typeOfCustomer": "Diamond"
+      }
+    },
+    {
+      "id": "7",
+      "firstName": "ádfasd",
+      "lastName": "ádfdasf",
+      "dateOfBirth": "2022-02-02",
+      "gender": 1,
+      "phone": "087963452",
+      "email": "a@dsfds",
+      "address": "DB",
+      "typeOfCustomer": {
+        "id": 2,
+        "typeOfCustomer": "Silver"
+      }
+    }
+  ],
+  "typeOfCustomer": [
+    {
+      "id": 1,
+      "typeOfCustomer": "Diamond"
+    },
+    {
+      "id": 2,
+      "typeOfCustomer": "Silver"
+    },
+    {
+      "id": 3,
+      "typeOfCustomer": "Gold"
+    }
+  ]
+}

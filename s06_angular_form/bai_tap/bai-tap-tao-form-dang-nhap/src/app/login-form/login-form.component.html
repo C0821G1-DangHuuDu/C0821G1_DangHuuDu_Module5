@@ -1,1 +1,35 @@
-<p>login-form works!</p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div>
+          <h1>Please sign in</h1>
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input type="text" name="email" id="email" formControlName="email"
+                 placeholder="name@example.com">
+
+          <p style="color:red;"
+               *ngIf="!loginForm.controls.email?.valid && (loginForm.controls.email?.dirty
+            ||loginForm.controls.email?.touched)"
+          >
+            Email is wrong format: name@example.com .
+          </p>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" formControlName="password"
+                 placeholder="Password">
+
+          <p style="color:red;"
+               *ngIf="!loginForm.controls.password?.valid && (loginForm.controls.password?.dirty || loginForm.controls.password?.touched)"
+          >
+            Password must be more than 6 characters.
+          </p>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button  [disabled]="!loginForm.valid" type="submit">Sign in</button>
+      </form>

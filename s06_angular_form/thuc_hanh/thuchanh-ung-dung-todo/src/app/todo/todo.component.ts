@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Todo} from '../todo';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {TodoService} from "../todo.service";
 
 let _id = 1;
 
@@ -13,7 +14,10 @@ export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   content = new FormControl();
 
-  constructor() {
+  constructor(private todoService: TodoService) {
+  this.todoService.findAll().subscribe(value => {
+    this.todos = value;
+  });
   }
 
   ngOnInit() {
@@ -34,5 +38,9 @@ export class TodoComponent implements OnInit {
       this.todos.push(todo);
       this.content.reset();
     }
+  }
+
+  changeStatus(todo: Todo) {
+    todo.complete = !todo.complete;
   }
 }

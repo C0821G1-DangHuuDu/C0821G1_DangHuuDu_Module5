@@ -1,0 +1,13 @@
+<h1>Dictionary Page</h1>
+
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Mean</th>
+  </tr>
+  <tr *ngFor="let w of listWord">
+    <td>{{w.word}}</td>
+    <td>{{w.mean}}</td>
+<td><a routerLink="/detail/{{w.word}}">Detail</a></td>
+  </tr>
+</table>

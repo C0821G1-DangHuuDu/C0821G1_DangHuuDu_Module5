@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+.header{
+  height: 150px;
+  align-items: center;
+  border: black solid 1px;
+}
+.nav{
+  border: black solid 1px;
+  height: 80px;
+  background-color: #046056;
+  padding-top: 10px;
+}
+.body{
+  height: 500px;
+}
+.left{
+  border: black solid 1px;
+}
+.right{
+  border: black solid 1px;
+}
+.relative {
+  position: relative;
+  z-index: 1;
+}
+.absolute {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  z-index: 2;
+}
+.sticky{
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+}
